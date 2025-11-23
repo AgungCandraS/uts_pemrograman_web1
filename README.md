@@ -23,43 +23,42 @@ HALAMAN BERANDA
 
 
 KOLEKSI PRODUK
+
 <img width="1366" height="768" alt="koleksi produk" src="https://github.com/user-attachments/assets/be3f6fdd-c9a1-4992-b2c6-b24428e94b9a" />
 
 
-
 KATALOG PRODUK
+
 <img width="1366" height="768" alt="katalog produk" src="https://github.com/user-attachments/assets/00d005e2-a8ac-4f6b-b9be-a0b3ac908ce1" />
 
 
-
 DETAIL PRODUK
+
 <img width="1366" height="768" alt="detail produk1" src="https://github.com/user-attachments/assets/00f1a84c-12b7-4ea8-9e00-fb27f8e57676" />
-
-
 
 <img width="1366" height="768" alt="detail produk2" src="https://github.com/user-attachments/assets/629accbc-2874-494f-b5d8-a9e49f42b5e2" />
 
 
-
 DETAIL PROFIL BRAND
+
 <img width="1366" height="768" alt="detail profil brand" src="https://github.com/user-attachments/assets/7547e280-ad4f-457e-a4b5-d73b333878fd" />
 
 
 DETAIL KEUNGGULAN
+
 <img width="1366" height="768" alt="keunggulan" src="https://github.com/user-attachments/assets/48bd54b6-fb5a-4d8f-94ea-2759b2847873" />
 
 
-
 TENTANG BRAND
-<img width="1366" height="768" alt="tentang brand1" src="https://github.com/user-attachments/assets/b03e1d52-dde7-4f77-bbb4-97453d11f362" />
 
+<img width="1366" height="768" alt="tentang brand1" src="https://github.com/user-attachments/assets/b03e1d52-dde7-4f77-bbb4-97453d11f362" />
 
 
 <img width="1366" height="768" alt="tentang brand2" src="https://github.com/user-attachments/assets/0e2d114f-e658-4ed0-96a8-54e6bb561f2e" />
 
 
-
 KONTAK
+
 <img width="1366" height="768" alt="form kontak" src="https://github.com/user-attachments/assets/1e277364-a0d0-44fa-a403-631ea97d3e48" />
 
 
