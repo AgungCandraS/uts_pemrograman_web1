@@ -1,0 +1,546 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* ==========================================================
+   GLOBAL THEME
+   ========================================================== */
+
+:root {
+  --bg-body: #020617;
+  --bg-surface: #020617;
+  --bg-soft: #0b1220;
+
+  --primary: #3b82f6;
+  --primary-soft: rgba(59, 130, 246, 0.18);
+  --primary-dark: #2563eb;
+
+  --accent: #f97316;
+
+  --text-main: #0039e6;
+  --text-soft: #01676e;
+  --text-muted: #6b7280;
+
+  --border-soft: rgba(148, 163, 184, 0.35);
+  --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.9);
+  --shadow-card: 0 14px 30px rgba(15, 23, 42, 0.85);
+
+  --radius-xl: 18px;
+  --transition-fast: 0.18s ease;
+  --transition-med: 0.25s ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body.bg-body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background:
+    radial-gradient(circle at top left, #1d4ed8 0, transparent 45%),
+    radial-gradient(circle at bottom right, #f97316 0, transparent 45%),
+    var(--bg-body);
+  color: var(--text-main);
+}
+
+/* link */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* batasi lebar container */
+.container {
+  max-width: 1140px;
+}
+
+/* ==========================================================
+   NAVBAR + LOGO
+   ========================================================== */
+
+.bg-nav {
+  background: linear-gradient(90deg, #020617, #020617, #111827);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.9);
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.85);
+}
+
+.navbar {
+  top: 0;
+}
+
+/* LOGO BULAT KIRI ATAS */
+.brand-logo-wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.35);
+}
+
+.brand-logo {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  margin-left: 0.5rem;
+}
+
+.brand-name {
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+.brand-tagline {
+  font-size: 0.7rem;
+  color: #e5e7eb;
+}
+
+/* Nav links */
+.navbar-dark .navbar-nav .nav-link {
+  font-size: 0.9rem;
+  color: rgba(229, 231, 235, 0.85);
+  position: relative;
+  padding-bottom: 0.25rem;
+  margin-inline: 0.25rem;
+}
+
+.navbar-dark .navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, #f97316, #facc15);
+  border-radius: 999px;
+  transition: width var(--transition-med);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #ffffff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover::after,
+.navbar-dark .navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
+/* Tombol kecil bulat (Login, Register, Dashboard, Logout) */
+.pill-btn {
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+
+/* ==========================================================
+   HERO SECTION (BERANDA)
+   ========================================================== */
+
+.hero-section {
+  background:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.25) 0, transparent 55%),
+    radial-gradient(circle at center right, rgba(248, 113, 113, 0.18) 0, transparent 55%),
+    linear-gradient(145deg, #020617, #020617 55%, #0b1120 100%);
+  color: var(--text-main);
+  min-height: 68vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at top right, rgba(248, 250, 252, 0.08), transparent 60%);
+  mix-blend-mode: soft-light;
+}
+
+.hero-kicker {
+  font-size: 0.8rem;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: #a5b4fc;
+}
+
+.hero-title {
+  font-size: clamp(2.1rem, 3.2vw, 2.9rem);
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.hero-title span {
+  background: linear-gradient(120deg, #f97316, #fbbf24);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-subtitle {
+  color: #cbd5f5;
+  max-width: 32rem;
+}
+
+/* Gambar di kanan hero */
+.hero-image {
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 26px;
+  box-shadow: 0 26px 60px rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+/* Animasi fade up hero text */
+.hero-section .hero-title,
+.hero-section .hero-subtitle,
+.hero-section .hero-kicker {
+  animation: fadeUp 0.7s ease-out both;
+}
+
+.hero-section .hero-title { animation-delay: 0.05s; }
+.hero-section .hero-subtitle { animation-delay: 0.12s; }
+
+/* TEKS BERJALAN DI BAWAH BUTTON HERO */
+.hero-marquee {
+  margin-top: 16px;
+  border-top: 1px solid rgba(148, 163, 184, 0.25);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 8px 0;
+}
+
+.hero-marquee span {
+  display: inline-block;
+  padding-right: 40px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--text-soft);
+  animation: heroMarquee 16s linear infinite;
+}
+
+/* ==========================================================
+   SECTIONS & TYPOGRAPHY
+   ========================================================== */
+
+.section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.section-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+}
+
+/* ==========================================================
+   CARDS (card-glass dipakai di banyak halaman)
+   ========================================================== */
+
+.card-glass {
+  background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.98));
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  overflow: hidden;
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    border-color var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.card-glass:hover {
+  transform: translateY(-4px);
+  border-color: rgba(248, 250, 252, 0.3);
+  box-shadow: 0 22px 55px rgba(15, 23, 42, 0.96);
+  background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.9), #020617);
+}
+
+.card-glass .card-title {
+  color: var(--text-main);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.card-glass .card-text {
+  color: var(--text-soft);
+  font-size: 0.85rem;
+}
+
+/* Product card di beranda & products.php */
+.product-card {
+  border-radius: var(--radius-xl);
+}
+
+.product-img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.product-price {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* badge kecil kategori */
+.badge-soft {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background-color: rgba(148, 163, 184, 0.18);
+  color: var(--text-main);
+  border-radius: 999px;
+  font-size: 0.7rem;
+  padding: 0.25rem 0.6rem;
+}
+
+/* ==========================================================
+   TABLES & DASHBOARD
+   ========================================================== */
+
+.table-dark {
+  --bs-table-bg: transparent;
+  --bs-table-border-color: rgba(31, 41, 55, 0.9);
+  --bs-table-striped-bg: rgba(15, 23, 42, 0.9);
+  --bs-table-striped-color: var(--text-main);
+  --bs-table-hover-bg: rgba(30, 64, 175, 0.45);
+}
+
+.table-dark th {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-soft);
+}
+
+.table-dark td {
+  font-size: 0.8rem;
+}
+
+/* ==========================================================
+   FORMS
+   ========================================================== */
+
+.form-control,
+.form-select {
+  border-radius: 10px;
+}
+
+.form-control.bg-dark,
+.form-select.bg-dark {
+  background-color: #020617 !important;
+  color: var(--text-main);
+  border: 1px solid rgba(55, 65, 81, 0.9);
+}
+
+.form-control.bg-dark:focus,
+.form-select.bg-dark:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.7);
+  outline: none;
+}
+
+.form-label.text-soft {
+  color: var(--text-soft);
+}
+
+/* browser autofill */
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #020617 inset !important;
+  -webkit-text-fill-color: var(--text-main) !important;
+}
+
+/* ==========================================================
+   ALERTS
+   ========================================================== */
+
+.alert {
+  border-radius: 12px;
+  border: 1px solid transparent;
+  font-size: 0.85rem;
+}
+
+.alert-success {
+  background-color: rgba(22, 163, 74, 0.1);
+  border-color: rgba(22, 163, 74, 0.5);
+  color: #bbf7d0;
+}
+
+.alert-danger {
+  background-color: rgba(220, 38, 38, 0.1);
+  border-color: rgba(220, 38, 38, 0.6);
+  color: #fecaca;
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+
+.footer {
+  margin-top: auto;
+  border-top: 1px solid rgba(148, 163, 184, 0.25);
+  background: #020617 !important;
+  color: var(--text-soft);
+  font-size: 0.8rem;
+}
+
+/* ==========================================================
+   BACK TO TOP BUTTON
+   ========================================================== */
+
+.back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  color: #e5e7eb;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  font-size: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================
+   UTILITIES
+   ========================================================== */
+
+.text-soft {
+  color: var(--text-soft);
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+.mt-6 { margin-top: 3.5rem; }
+.mb-6 { margin-bottom: 3.5rem; }
+
+/* ==========================================================
+   ANIMATIONS
+   ========================================================== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* animasi halus untuk semua card */
+.card-glass {
+  animation: fadeInScale 0.45s ease-out both;
+}
+.section .card-glass {
+  animation-duration: 0.5s;
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 991.98px) {
+  .hero-section {
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    margin-inline: auto;
+  }
+
+  .hero-image {
+    max-height: 280px;
+    margin-top: 1rem;
+  }
+
+  .brand-text {
+    display: none; /* di hp cukup logo bulat saja biar hemat space */
+  }
+}
+
+@media (max-width: 575.98px) {
+  .product-img {
+    height: 170px;
+  }
+
+  .section {
+    padding-top: 2.3rem;
+    padding-bottom: 2.3rem;
+  }
+}
