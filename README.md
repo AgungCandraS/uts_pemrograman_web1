@@ -9,7 +9,7 @@ UJIAN TENGAH SEMESTER PEMROGRAMAN WEB 1
 PROJECT 1
 
 DEMO WEB
-https://github.com/user-attachments/assets/4876a463-4d7c-4078-9fdc-31e52457b403
+https://github.com/user-attachments/assets/2a0e473b-069c-451e-8da0-caebc0b36607
 
 SCREENSHOOT PROJECT 1
 
